@@ -26,6 +26,55 @@ gettime(&t);
 printf("The current time is: %2d:%02d:%02d.%02d
 ",t.ti_hour, t.ti_min,
 t.ti_sec, t.ti_hund);
+  //initgraph(&gm,&gd,"  ");
+front();
+closegraph();
+//delay(10);
+//sta();
+ a:
+initgraph(&gd,&gm," ");
+flag=0;
+setbkcolor(0);
+s=-60;e=60;
+
+sound(221.38);
+for(f=1;f<=20;f++)
+ {
+ setcolor(BLUE);
+ line(280,f+360,360,f+360);
+       }
+       setcolor(RED);
+       settextstyle(SMALL_FONT,HORIZ_DIR,4);
+       outtextxy(305,364,"SHOOT");
+arrows(0);
+
+setcolor(GREEN+WHITE);
+rectangle(5,5,634,474);
+rectangle(6,6,633,473);
+setcolor(YELLOW);
+rectangle(7,7,632,472);
+setcolor(GREEN+WHITE);
+rectangle(8,8,631,471);
+rectangle(9,9,630,470);
+rectangle(10,10,629,469);
+
+setcolor(YELLOW);
+settextstyle(SANS_SERIF_FONT,HORIZ_DIR,2);
+outtextxy(530,20,"SCORE");
+scor=0;
+score(200);
+m=6;
+equip();
+arrow1(0,14);
+alh=0;
+mousereg();
+while(m>1)         /* while start */
+{
+	    //button=0;
+    for(j=-70;j<=70;j+=2)           /* start for*/
+       {   c=1;
+	   tar(j,c);
+	   delay(10);
 while(!kbhit())
 {
 setcolor(5);
